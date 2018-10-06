@@ -1,12 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 
-  <h1><%= @product.name %></h1>
+ 	<%= @product.name %>
+  <%= @product.description %>
   
-  <% if @product.description %>
-  	<p class="description"><%= @product.description %></p>
-  <% end %>
-
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
