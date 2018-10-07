@@ -20,6 +20,10 @@ class ProductPresenter < SimpleDelegator
 		end
 	end
 
+	def paid_partial
+		product.paid ? "shared/order" : "shared/download"	
+	end
+
 	private
 
 	def helpers
