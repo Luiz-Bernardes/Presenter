@@ -14,7 +14,7 @@ class ProductPresenter < Burgundy::Item
 	# obs: item = product(no gem)
 
 	def name		
-			h.content_tag(:h1, item.name)
+		h.content_tag(:h1, item.name)
 	end
 
 	def description
