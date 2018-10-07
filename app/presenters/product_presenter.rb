@@ -1,33 +1,36 @@
-class ProductPresenter < SimpleDelegator
-	attr_reader :product
+class ProductPresenter < Burgundy::Item
+# class ProductPresenter < SimpleDelegator
+	# attr_reader :product
 
-	def initialize(product)
-		@product = product
-		__setobj__(product)
-	end
+	# def initialize(product)
+	# 	@product = product
+	# 	__setobj__(product)
+	# end
 
-	def eql?(target)
-		target == self || product.eql?(target)
-	end
+	# def eql?(target)
+	# 	target == self || product.eql?(target)
+	# end
+
+	# obs: item = product(no gem)
 
 	def name		
-			helpers.content_tag(:h1, product.name)
+			h.content_tag(:h1, item.name)
 	end
 
 	def description
-		if product.description.present?
-			helpers.content_tag(:p, product.description, class: "description")
+		if item.description.present?
+			h.content_tag(:p, item.description, class: "description")
 		end
 	end
 
 	def paid_partial
-		product.paid ? "shared/order" : "shared/download"	
+		item.paid ? "shared/order" : "shared/download"	
 	end
 
-	private
+	# private
 
-	def helpers
-		ApplicationController.helpers
-	end
+	# def helpers
+	# 	ApplicationController.helpers
+	# end
 
 end

@@ -18,6 +18,10 @@
 
 * Resources
 	
-	Product
+	Products
+
+* Additional Gems
+
+	Burgundy
 
 # Presenter-Serializer

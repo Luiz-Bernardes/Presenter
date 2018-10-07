@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    # @products = ProductPresenter.wrap(Product.sorted_by_name)
   end
 
   def show

@@ -51,6 +51,7 @@ GEM
     bootsnap (1.3.2)
       msgpack (~> 1.0)
     builder (3.2.3)
+    burgundy (0.2.0)
     byebug (10.0.2)
     capybara (3.9.0)
       addressable
@@ -193,6 +194,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.1.0)
+  burgundy
   byebug
   capybara (>= 2.15)
   chromedriver-helper
